@@ -6,4 +6,4 @@ from . import text_preprocessor
 
 # Making certain symbols available when the package is imported
 __all__ = ['compare_strings', 'file_handler', 'text_preprocessor']
-#print(f"Initializing helpers package, available helpers: {__all__}")
+#print(f"Initializing handlers package, available helpers: {__all__}")
