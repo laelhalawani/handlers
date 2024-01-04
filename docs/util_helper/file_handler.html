@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
 <meta name="generator" content="pdoc 0.10.0" />
-<title>handlers.file_handler API documentation</title>
+<title>util_helper.file_handler API documentation</title>
 <meta name="description" content="" />
 <link rel="preload stylesheet" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/11.0.1/sanitize.min.css" integrity="sha256-PK9q560IAAa6WVRRh76LtCaI8pjTJ2z11v0miyNNjrs=" crossorigin>
 <link rel="preload stylesheet" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/11.0.1/typography.min.css" integrity="sha256-7l/o7C8jubJiy74VsKTidCy1yBkRtiUGbVkYBylBqUg=" crossorigin>
@@ -19,7 +19,7 @@
 <main>
 <article id="content">
 <header>
-<h1 class="title">Module <code>handlers.file_handler</code></h1>
+<h1 class="title">Module <code>util_helper.file_handler</code></h1>
 </header>
 <section id="section-intro">
 <details class="source">
@@ -385,7 +385,7 @@ def copy_file(file_path, new_path):
 <section>
 <h2 class="section-title" id="header-functions">Functions</h2>
 <dl>
-<dt id="handlers.file_handler.change_extension"><code class="name flex">
+<dt id="util_helper.file_handler.change_extension"><code class="name flex">
 <span>def <span class="ident">change_extension</span></span>(<span>file_path: str, new_extension: str) ‑> str</span>
 </code></dt>
 <dd>
@@ -422,7 +422,7 @@ def copy_file(file_path, new_path):
     return remove_extension(file_path) + new_extension</code></pre>
 </details>
 </dd>
-<dt id="handlers.file_handler.copy_file"><code class="name flex">
+<dt id="util_helper.file_handler.copy_file"><code class="name flex">
 <span>def <span class="ident">copy_file</span></span>(<span>file_path, new_path)</span>
 </code></dt>
 <dd>
@@ -439,7 +439,7 @@ def copy_file(file_path, new_path):
         raise ValueError(f&#34;File {file_path} doesn&#39;t exist!&#34;)</code></pre>
 </details>
 </dd>
-<dt id="handlers.file_handler.create_dir"><code class="name flex">
+<dt id="util_helper.file_handler.create_dir"><code class="name flex">
 <span>def <span class="ident">create_dir</span></span>(<span>dir_path: str) ‑> str</span>
 </code></dt>
 <dd>
@@ -473,7 +473,7 @@ def copy_file(file_path, new_path):
     return dir_path</code></pre>
 </details>
 </dd>
-<dt id="handlers.file_handler.create_dirs_for"><code class="name flex">
+<dt id="util_helper.file_handler.create_dirs_for"><code class="name flex">
 <span>def <span class="ident">create_dirs_for</span></span>(<span>path: str)</span>
 </code></dt>
 <dd>
@@ -489,7 +489,7 @@ def copy_file(file_path, new_path):
     create_dir(get_directory(path))</code></pre>
 </details>
 </dd>
-<dt id="handlers.file_handler.does_dir_exist"><code class="name flex">
+<dt id="util_helper.file_handler.does_dir_exist"><code class="name flex">
 <span>def <span class="ident">does_dir_exist</span></span>(<span>dir_path: str) ‑> bool</span>
 </code></dt>
 <dd>
@@ -520,7 +520,7 @@ def copy_file(file_path, new_path):
     return False</code></pre>
 </details>
 </dd>
-<dt id="handlers.file_handler.does_file_exist"><code class="name flex">
+<dt id="util_helper.file_handler.does_file_exist"><code class="name flex">
 <span>def <span class="ident">does_file_exist</span></span>(<span>file_path: str) ‑> bool</span>
 </code></dt>
 <dd>
@@ -551,7 +551,7 @@ def copy_file(file_path, new_path):
     return False</code></pre>
 </details>
 </dd>
-<dt id="handlers.file_handler.generate_next_file_name_path"><code class="name flex">
+<dt id="util_helper.file_handler.generate_next_file_name_path"><code class="name flex">
 <span>def <span class="ident">generate_next_file_name_path</span></span>(<span>save_dir: str)</span>
 </code></dt>
 <dd>
@@ -603,7 +603,7 @@ Use this to avoid overwriting files and to generate unique file names on the fly
     return n</code></pre>
 </details>
 </dd>
-<dt id="handlers.file_handler.get_basename"><code class="name flex">
+<dt id="util_helper.file_handler.get_basename"><code class="name flex">
 <span>def <span class="ident">get_basename</span></span>(<span>file_path)</span>
 </code></dt>
 <dd>
@@ -616,7 +616,7 @@ Use this to avoid overwriting files and to generate unique file names on the fly
     return os.path.basename(file_path)</code></pre>
 </details>
 </dd>
-<dt id="handlers.file_handler.get_directory"><code class="name flex">
+<dt id="util_helper.file_handler.get_directory"><code class="name flex">
 <span>def <span class="ident">get_directory</span></span>(<span>dir_path: str) ‑> str</span>
 </code></dt>
 <dd>
@@ -648,7 +648,7 @@ Use this to avoid overwriting files and to generate unique file names on the fly
     return os.path.dirname(dir_path)</code></pre>
 </details>
 </dd>
-<dt id="handlers.file_handler.get_extension"><code class="name flex">
+<dt id="util_helper.file_handler.get_extension"><code class="name flex">
 <span>def <span class="ident">get_extension</span></span>(<span>file_path: str) ‑> str</span>
 </code></dt>
 <dd>
@@ -685,7 +685,7 @@ Use this to avoid overwriting files and to generate unique file names on the fly
     return ext</code></pre>
 </details>
 </dd>
-<dt id="handlers.file_handler.is_file_format"><code class="name flex">
+<dt id="util_helper.file_handler.is_file_format"><code class="name flex">
 <span>def <span class="ident">is_file_format</span></span>(<span>file_path: str, supported_extensions: list = None)</span>
 </code></dt>
 <dd>
@@ -707,7 +707,7 @@ Use this to avoid overwriting files and to generate unique file names on the fly
     return False</code></pre>
 </details>
 </dd>
-<dt id="handlers.file_handler.is_file_image"><code class="name flex">
+<dt id="util_helper.file_handler.is_file_image"><code class="name flex">
 <span>def <span class="ident">is_file_image</span></span>(<span>file_path: str, supported_extensions: list = None)</span>
 </code></dt>
 <dd>
@@ -729,7 +729,7 @@ Use this to avoid overwriting files and to generate unique file names on the fly
     return True if ext in supported_extensions else False</code></pre>
 </details>
 </dd>
-<dt id="handlers.file_handler.join_paths"><code class="name flex">
+<dt id="util_helper.file_handler.join_paths"><code class="name flex">
 <span>def <span class="ident">join_paths</span></span>(<span>*path_parts: str) ‑> str</span>
 </code></dt>
 <dd>
@@ -742,7 +742,7 @@ Use this to avoid overwriting files and to generate unique file names on the fly
     return os.path.join(*path_parts)</code></pre>
 </details>
 </dd>
-<dt id="handlers.file_handler.list_files_in_dir"><code class="name flex">
+<dt id="util_helper.file_handler.list_files_in_dir"><code class="name flex">
 <span>def <span class="ident">list_files_in_dir</span></span>(<span>dir_path: str, show_directories: bool = True, show_files: bool = True, only_with_extensions=None, absolute: bool = False) ‑> list</span>
 </code></dt>
 <dd>
@@ -802,7 +802,7 @@ Use this to avoid overwriting files and to generate unique file names on the fly
     return files</code></pre>
 </details>
 </dd>
-<dt id="handlers.file_handler.load_json_file"><code class="name flex">
+<dt id="util_helper.file_handler.load_json_file"><code class="name flex">
 <span>def <span class="ident">load_json_file</span></span>(<span>file_path: str) ‑> str</span>
 </code></dt>
 <dd>
@@ -834,7 +834,7 @@ Use this to avoid overwriting files and to generate unique file names on the fly
     return json.load(open(file_path))</code></pre>
 </details>
 </dd>
-<dt id="handlers.file_handler.load_text_file"><code class="name flex">
+<dt id="util_helper.file_handler.load_text_file"><code class="name flex">
 <span>def <span class="ident">load_text_file</span></span>(<span>file_path: str) ‑> str</span>
 </code></dt>
 <dd>
@@ -867,7 +867,7 @@ Use this to avoid overwriting files and to generate unique file names on the fly
         return file.read()</code></pre>
 </details>
 </dd>
-<dt id="handlers.file_handler.parse_json"><code class="name flex">
+<dt id="util_helper.file_handler.parse_json"><code class="name flex">
 <span>def <span class="ident">parse_json</span></span>(<span>json_string)</span>
 </code></dt>
 <dd>
@@ -880,7 +880,7 @@ Use this to avoid overwriting files and to generate unique file names on the fly
     return json.loads(json_string)</code></pre>
 </details>
 </dd>
-<dt id="handlers.file_handler.remove_dir"><code class="name flex">
+<dt id="util_helper.file_handler.remove_dir"><code class="name flex">
 <span>def <span class="ident">remove_dir</span></span>(<span>dir_path, with_contents=True, recursive=True)</span>
 </code></dt>
 <dd>
@@ -901,7 +901,7 @@ Use this to avoid overwriting files and to generate unique file names on the fly
             os.rmdir(dir_path)</code></pre>
 </details>
 </dd>
-<dt id="handlers.file_handler.remove_extension"><code class="name flex">
+<dt id="util_helper.file_handler.remove_extension"><code class="name flex">
 <span>def <span class="ident">remove_extension</span></span>(<span>file_path: str) ‑> str</span>
 </code></dt>
 <dd>
@@ -936,7 +936,7 @@ Use this to avoid overwriting files and to generate unique file names on the fly
         return file_path</code></pre>
 </details>
 </dd>
-<dt id="handlers.file_handler.remove_file"><code class="name flex">
+<dt id="util_helper.file_handler.remove_file"><code class="name flex">
 <span>def <span class="ident">remove_file</span></span>(<span>file_path)</span>
 </code></dt>
 <dd>
@@ -950,7 +950,7 @@ Use this to avoid overwriting files and to generate unique file names on the fly
         os.remove(file_path)</code></pre>
 </details>
 </dd>
-<dt id="handlers.file_handler.rename_file"><code class="name flex">
+<dt id="util_helper.file_handler.rename_file"><code class="name flex">
 <span>def <span class="ident">rename_file</span></span>(<span>file_path, new_name)</span>
 </code></dt>
 <dd>
@@ -964,7 +964,7 @@ Use this to avoid overwriting files and to generate unique file names on the fly
         os.rename(file_path, new_name)</code></pre>
 </details>
 </dd>
-<dt id="handlers.file_handler.save_json_file"><code class="name flex">
+<dt id="util_helper.file_handler.save_json_file"><code class="name flex">
 <span>def <span class="ident">save_json_file</span></span>(<span>file_path: str, data) ‑> str</span>
 </code></dt>
 <dd>
@@ -1005,7 +1005,7 @@ Creates the directory if it doesn't exist.</p>
     return file_path</code></pre>
 </details>
 </dd>
-<dt id="handlers.file_handler.save_text_file"><code class="name flex">
+<dt id="util_helper.file_handler.save_text_file"><code class="name flex">
 <span>def <span class="ident">save_text_file</span></span>(<span>file_path: str, text: str) ‑> str</span>
 </code></dt>
 <dd>
@@ -1053,34 +1053,34 @@ text (str): The text to be saved to the file.</p>
 <ul id="index">
 <li><h3>Super-module</h3>
 <ul>
-<li><code><a title="handlers" href="index.html">handlers</a></code></li>
+<li><code><a title="util_helper" href="index.html">util_helper</a></code></li>
 </ul>
 </li>
 <li><h3><a href="#header-functions">Functions</a></h3>
 <ul class="">
-<li><code><a title="handlers.file_handler.change_extension" href="#handlers.file_handler.change_extension">change_extension</a></code></li>
-<li><code><a title="handlers.file_handler.copy_file" href="#handlers.file_handler.copy_file">copy_file</a></code></li>
-<li><code><a title="handlers.file_handler.create_dir" href="#handlers.file_handler.create_dir">create_dir</a></code></li>
-<li><code><a title="handlers.file_handler.create_dirs_for" href="#handlers.file_handler.create_dirs_for">create_dirs_for</a></code></li>
-<li><code><a title="handlers.file_handler.does_dir_exist" href="#handlers.file_handler.does_dir_exist">does_dir_exist</a></code></li>
-<li><code><a title="handlers.file_handler.does_file_exist" href="#handlers.file_handler.does_file_exist">does_file_exist</a></code></li>
-<li><code><a title="handlers.file_handler.generate_next_file_name_path" href="#handlers.file_handler.generate_next_file_name_path">generate_next_file_name_path</a></code></li>
-<li><code><a title="handlers.file_handler.get_basename" href="#handlers.file_handler.get_basename">get_basename</a></code></li>
-<li><code><a title="handlers.file_handler.get_directory" href="#handlers.file_handler.get_directory">get_directory</a></code></li>
-<li><code><a title="handlers.file_handler.get_extension" href="#handlers.file_handler.get_extension">get_extension</a></code></li>
-<li><code><a title="handlers.file_handler.is_file_format" href="#handlers.file_handler.is_file_format">is_file_format</a></code></li>
-<li><code><a title="handlers.file_handler.is_file_image" href="#handlers.file_handler.is_file_image">is_file_image</a></code></li>
-<li><code><a title="handlers.file_handler.join_paths" href="#handlers.file_handler.join_paths">join_paths</a></code></li>
-<li><code><a title="handlers.file_handler.list_files_in_dir" href="#handlers.file_handler.list_files_in_dir">list_files_in_dir</a></code></li>
-<li><code><a title="handlers.file_handler.load_json_file" href="#handlers.file_handler.load_json_file">load_json_file</a></code></li>
-<li><code><a title="handlers.file_handler.load_text_file" href="#handlers.file_handler.load_text_file">load_text_file</a></code></li>
-<li><code><a title="handlers.file_handler.parse_json" href="#handlers.file_handler.parse_json">parse_json</a></code></li>
-<li><code><a title="handlers.file_handler.remove_dir" href="#handlers.file_handler.remove_dir">remove_dir</a></code></li>
-<li><code><a title="handlers.file_handler.remove_extension" href="#handlers.file_handler.remove_extension">remove_extension</a></code></li>
-<li><code><a title="handlers.file_handler.remove_file" href="#handlers.file_handler.remove_file">remove_file</a></code></li>
-<li><code><a title="handlers.file_handler.rename_file" href="#handlers.file_handler.rename_file">rename_file</a></code></li>
-<li><code><a title="handlers.file_handler.save_json_file" href="#handlers.file_handler.save_json_file">save_json_file</a></code></li>
-<li><code><a title="handlers.file_handler.save_text_file" href="#handlers.file_handler.save_text_file">save_text_file</a></code></li>
+<li><code><a title="util_helper.file_handler.change_extension" href="#util_helper.file_handler.change_extension">change_extension</a></code></li>
+<li><code><a title="util_helper.file_handler.copy_file" href="#util_helper.file_handler.copy_file">copy_file</a></code></li>
+<li><code><a title="util_helper.file_handler.create_dir" href="#util_helper.file_handler.create_dir">create_dir</a></code></li>
+<li><code><a title="util_helper.file_handler.create_dirs_for" href="#util_helper.file_handler.create_dirs_for">create_dirs_for</a></code></li>
+<li><code><a title="util_helper.file_handler.does_dir_exist" href="#util_helper.file_handler.does_dir_exist">does_dir_exist</a></code></li>
+<li><code><a title="util_helper.file_handler.does_file_exist" href="#util_helper.file_handler.does_file_exist">does_file_exist</a></code></li>
+<li><code><a title="util_helper.file_handler.generate_next_file_name_path" href="#util_helper.file_handler.generate_next_file_name_path">generate_next_file_name_path</a></code></li>
+<li><code><a title="util_helper.file_handler.get_basename" href="#util_helper.file_handler.get_basename">get_basename</a></code></li>
+<li><code><a title="util_helper.file_handler.get_directory" href="#util_helper.file_handler.get_directory">get_directory</a></code></li>
+<li><code><a title="util_helper.file_handler.get_extension" href="#util_helper.file_handler.get_extension">get_extension</a></code></li>
+<li><code><a title="util_helper.file_handler.is_file_format" href="#util_helper.file_handler.is_file_format">is_file_format</a></code></li>
+<li><code><a title="util_helper.file_handler.is_file_image" href="#util_helper.file_handler.is_file_image">is_file_image</a></code></li>
+<li><code><a title="util_helper.file_handler.join_paths" href="#util_helper.file_handler.join_paths">join_paths</a></code></li>
+<li><code><a title="util_helper.file_handler.list_files_in_dir" href="#util_helper.file_handler.list_files_in_dir">list_files_in_dir</a></code></li>
+<li><code><a title="util_helper.file_handler.load_json_file" href="#util_helper.file_handler.load_json_file">load_json_file</a></code></li>
+<li><code><a title="util_helper.file_handler.load_text_file" href="#util_helper.file_handler.load_text_file">load_text_file</a></code></li>
+<li><code><a title="util_helper.file_handler.parse_json" href="#util_helper.file_handler.parse_json">parse_json</a></code></li>
+<li><code><a title="util_helper.file_handler.remove_dir" href="#util_helper.file_handler.remove_dir">remove_dir</a></code></li>
+<li><code><a title="util_helper.file_handler.remove_extension" href="#util_helper.file_handler.remove_extension">remove_extension</a></code></li>
+<li><code><a title="util_helper.file_handler.remove_file" href="#util_helper.file_handler.remove_file">remove_file</a></code></li>
+<li><code><a title="util_helper.file_handler.rename_file" href="#util_helper.file_handler.rename_file">rename_file</a></code></li>
+<li><code><a title="util_helper.file_handler.save_json_file" href="#util_helper.file_handler.save_json_file">save_json_file</a></code></li>
+<li><code><a title="util_helper.file_handler.save_text_file" href="#util_helper.file_handler.save_text_file">save_text_file</a></code></li>
 </ul>
 </li>
 </ul>
