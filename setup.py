@@ -4,7 +4,7 @@ with open("./README.md", "r") as fh:
     long_description = fh.read()
 setup(
     name="handlers",
-    version="0.0.1",
+    version="0.0.2",
     packages=find_packages(),
     #install_requires=[],
     #package_data={'glai': ['back_end/model_db/gguf_models/*.json']},
@@ -20,7 +20,7 @@ setup(
         "License :: Free for non-commercial use",
         "Natural Language :: English",
         "Operating System :: OS Independent",
-        "Programming Language :: Python :: 3.x",
+        "Programming Language :: Python :: 3",
     ],
     long_description=long_description,
     long_description_content_type='text/markdown',
