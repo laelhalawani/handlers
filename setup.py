@@ -4,7 +4,7 @@ with open("./README.md", "r") as fh:
     long_description = fh.read()
 setup(
     name="util_helper",
-    version="0.0.2",
+    version="0.0.3",
     packages=find_packages(),
     #install_requires=[],
     #package_data={'glai': ['back_end/model_db/gguf_models/*.json']},
@@ -25,5 +25,5 @@ setup(
     long_description=long_description,
     long_description_content_type='text/markdown',
     keywords=['file handling', 'string comparison', 'text preprocessing'],
-    url="https://github.com/laelhalawani/glai",
+    url="https://github.com/laelhalawani/util_helper",
 )
