@@ -3,7 +3,7 @@ from setuptools import setup, find_packages
 with open("./README.md", "r") as fh:
     long_description = fh.read()
 setup(
-    name="handlers",
+    name="util_helper",
     version="0.0.2",
     packages=find_packages(),
     #install_requires=[],
