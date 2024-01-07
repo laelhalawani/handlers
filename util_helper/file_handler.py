@@ -349,5 +349,13 @@ def copy_file(file_path, new_path):
     else:
         raise ValueError(f"File {file_path} doesn't exist!")
 
-
+def copy_large_file(source_path, destination_path, buffer_size_mb=1):  # Default buffer size is 1 MB
+    buffer_size = buffer_size_mb * 1024 * 1024
+    with open(source_path, 'rb') as fsrc:
+        with open(destination_path, 'wb') as fdst:
+            while True:
+                chunk = fsrc.read(buffer_size)
+                if not chunk:
+                    break
+                fdst.write(chunk)
 
