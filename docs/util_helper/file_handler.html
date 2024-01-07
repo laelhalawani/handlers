@@ -375,7 +375,17 @@ def copy_file(file_path, new_path):
         shutil.copy(file_path, new_path)
         return new_path
     else:
-        raise ValueError(f&#34;File {file_path} doesn&#39;t exist!&#34;)</code></pre>
+        raise ValueError(f&#34;File {file_path} doesn&#39;t exist!&#34;)
+
+def copy_large_file(source_path, destination_path, buffer_size_mb=1):  # Default buffer size is 1 MB
+    buffer_size = buffer_size_mb * 1024 * 1024
+    with open(source_path, &#39;rb&#39;) as fsrc:
+        with open(destination_path, &#39;wb&#39;) as fdst:
+            while True:
+                chunk = fsrc.read(buffer_size)
+                if not chunk:
+                    break
+                fdst.write(chunk)</code></pre>
 </details>
 </section>
 <section>
