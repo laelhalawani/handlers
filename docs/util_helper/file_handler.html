@@ -385,7 +385,10 @@ def copy_large_file(source_path, destination_path, buffer_size_mb=1):  # Default
                 chunk = fsrc.read(buffer_size)
                 if not chunk:
                     break
-                fdst.write(chunk)</code></pre>
+                fdst.write(chunk)
+
+def get_absolute_path(path):
+    return os.path.abspath(path)</code></pre>
 </details>
 </section>
 <section>

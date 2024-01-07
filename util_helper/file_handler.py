@@ -359,3 +359,5 @@ def copy_large_file(source_path, destination_path, buffer_size_mb=1):  # Default
                     break
                 fdst.write(chunk)
 
+def get_absolute_path(path):
+    return os.path.abspath(path)
