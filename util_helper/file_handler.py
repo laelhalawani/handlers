@@ -294,7 +294,7 @@ def change_extension(file_path : str, new_extension : str) -> str:
         new_extension = f".{new_extension}"
     return remove_extension(file_path) + new_extension
 
-def generate_next_file_name_path(save_dir:str, _prefix:str="", _postfix:str="", _extension:str=""):
+def generate_next_file_name_path(save_dir:str, _prefix:str="", _postfix:str="", _extension:str="", gen_next_dir_name:bool=False):
     """
     Generates the next available file name path in the specified directory.
     Use this to avoid overwriting files and to generate unique file names on the fly for variable number of files.
@@ -313,7 +313,7 @@ def generate_next_file_name_path(save_dir:str, _prefix:str="", _postfix:str="", 
     while True:
         n = f"{_prefix}{file_num}{_postfix}{_extension}"
         n = join_paths(save_dir, n)
-        if does_file_exist(n):
+        if (not gen_next_dir_name and does_file_exist(n)) or (gen_next_dir_name and does_dir_exist(n)):
             file_num += 1
         else:
             break
