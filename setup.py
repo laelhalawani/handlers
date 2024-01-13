@@ -4,7 +4,7 @@ with open("./README.md", "r") as fh:
     long_description = fh.read()
 setup(
     name="util_helper",
-    version="0.0.3",
+    version="0.0.5",
     packages=find_packages(),
     #install_requires=[],
     #package_data={'glai': ['back_end/model_db/gguf_models/*.json']},

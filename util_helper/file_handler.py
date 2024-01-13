@@ -294,7 +294,7 @@ def change_extension(file_path : str, new_extension : str) -> str:
         new_extension = f".{new_extension}"
     return remove_extension(file_path) + new_extension
 
-def generate_next_file_name_path(save_dir:str, _prefix:str="", _postfix:str="", _extension:str=""):
+def generate_next_file_name_path(save_dir:str, _prefix:str="", _postfix:str="", _extension:str="", gen_next_dir_name:bool=False):
     """
     Generates the next available file name path in the specified directory.
     Use this to avoid overwriting files and to generate unique file names on the fly for variable number of files.
@@ -313,7 +313,7 @@ def generate_next_file_name_path(save_dir:str, _prefix:str="", _postfix:str="", 
     while True:
         n = f"{_prefix}{file_num}{_postfix}{_extension}"
         n = join_paths(save_dir, n)
-        if does_file_exist(n):
+        if (not gen_next_dir_name and does_file_exist(n)) or (gen_next_dir_name and does_dir_exist(n)):
             file_num += 1
         else:
             break
@@ -349,5 +349,15 @@ def copy_file(file_path, new_path):
     else:
         raise ValueError(f"File {file_path} doesn't exist!")
 
+def copy_large_file(source_path, destination_path, buffer_size_mb=1):  # Default buffer size is 1 MB
+    buffer_size = buffer_size_mb * 1024 * 1024
+    with open(source_path, 'rb') as fsrc:
+        with open(destination_path, 'wb') as fdst:
+            while True:
+                chunk = fsrc.read(buffer_size)
+                if not chunk:
+                    break
+                fdst.write(chunk)
 
-
+def get_absolute_path(path):
+    return os.path.abspath(path)
